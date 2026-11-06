@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" fill="none">
+<defs>
+ <linearGradient id="wall" x1="800" y1="0" x2="800" y2="750" gradientUnits="userSpaceOnUse"><stop stop-color="#293947"/><stop offset="1" stop-color="#41444a"/></linearGradient>
+ <linearGradient id="side" x1="1380" y1="0" x2="1600" y2="600" gradientUnits="userSpaceOnUse"><stop stop-color="#25323c"/><stop offset="1" stop-color="#34363b"/></linearGradient>
+ <linearGradient id="floor" x1="800" y1="680" x2="800" y2="1000" gradientUnits="userSpaceOnUse"><stop stop-color="#8d6250"/><stop offset="1" stop-color="#4e3c39"/></linearGradient>
+ <linearGradient id="wood" x1="1200" y1="580" x2="1200" y2="750" gradientUnits="userSpaceOnUse"><stop stop-color="#b5825d"/><stop offset="1" stop-color="#795342"/></linearGradient>
+ <linearGradient id="sofa" x1="380" y1="450" x2="380" y2="780" gradientUnits="userSpaceOnUse"><stop stop-color="#bc776c"/><stop offset="1" stop-color="#8e514e"/></linearGradient>
+ <linearGradient id="sky" x1="860" y1="100" x2="860" y2="510" gradientUnits="userSpaceOnUse"><stop stop-color="#152a40"/><stop offset="1" stop-color="#454859"/></linearGradient>
+ <linearGradient id="roseglint" x1="860" y1="350" x2="860" y2="505" gradientUnits="userSpaceOnUse"><stop stop-color="#d89ba0" stop-opacity="0"/><stop offset="1" stop-color="#d89ba0" stop-opacity=".13"/></linearGradient>
+ <radialGradient id="light" cx=".5" cy=".25" r=".75"><stop stop-color="#ffcf8e" stop-opacity=".55"/><stop offset=".55" stop-color="#edaf77" stop-opacity=".12"/><stop offset="1" stop-color="#edaf77" stop-opacity="0"/></radialGradient>
+ <radialGradient id="lampglow"><stop stop-color="#ffce8a" stop-opacity=".34"/><stop offset="1" stop-color="#ffce8a" stop-opacity="0"/></radialGradient>
+ <pattern id="wallpaper" width="110" height="110" patternUnits="userSpaceOnUse"><path d="M55 10v18m-9-9h18M0 65v18m-9-9h18M110 65v18m-9-9h18" stroke="#c2b49b" stroke-opacity=".06" stroke-width="2"/></pattern>
+ <pattern id="rugline" width="16" height="16" patternUnits="userSpaceOnUse" patternTransform="rotate(5)"><path d="M0 4h16M0 12h16" stroke="#bc9779" stroke-opacity=".12"/></pattern>
+ <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".65" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope=".045"/></feComponentTransfer><feBlend in="SourceGraphic" mode="soft-light"/></filter>
+ <filter id="shadow" x="-20%" y="-30%" width="140%" height="170%"><feGaussianBlur stdDeviation="12"/></filter>
+ <clipPath id="glass"><path d="M650 505V292C650 55 1080 55 1080 292V505Z"/></clipPath>
+</defs>
+<!-- Architecture -->
+<path d="M0 0H1600V1000H0Z" fill="url(#wall)"/>
+<path d="M0 0H1600V717H0Z" fill="url(#wallpaper)"/>
+<path d="M1384 0H1600V787L1384 710Z" fill="url(#side)"/>
+<path d="M0 711H1384L1600 787V1000H0Z" fill="url(#floor)"/>
+<path d="M0 696H1385L1600 772V791L1380 716H0Z" fill="#30383b"/>
+<path d="M0 697H1384M1385 697L1600 774" stroke="#c29a72" stroke-opacity=".19" stroke-width="3"/>
+<g stroke="#2a2a30" stroke-opacity=".25" stroke-width="2"><path d="M0 752H1497M0 805H1600M0 870H1600M0 948H1600"/><path d="M230 711 160 1000M495 711 463 1000M760 711 765 1000M1025 711 1067 1000M1290 711 1370 1000"/><path d="M365 752v53m654 0v65m-526 0v78m944 0v52"/></g>
+<path d="M0 39H1380M31 0V697" stroke="#172731" stroke-opacity=".35" stroke-width="5"/>
+<ellipse cx="1115" cy="387" rx="395" ry="550" fill="url(#light)"/>
+<!-- Arched window and curtains -->
+<path d="M621 529V291C621 20 1109 20 1109 291V529Z" fill="#19262e" stroke="#19262e" stroke-width="10"/>
+<path d="M636 519V292C636 38 1094 38 1094 292V519Z" fill="#9c8270"/>
+<path d="M650 505V292C650 55 1080 55 1080 292V505Z" fill="url(#sky)"/>
+<path d="M650 350H1080V505H650Z" fill="url(#roseglint)"/>
+<g clip-path="url(#glass)" stroke="#7890a1" stroke-opacity=".13"><path d="M641 189H1096M641 319H1096M641 449H1096"/><path d="M703 0 637 530M1081 0 1016 530" stroke-width="5"/></g>
+<path d="M865 111V505M650 316H1080" stroke="#937a68" stroke-width="10"/>
+<path d="M650 501H1080" stroke="#d1ad87" stroke-opacity=".35" stroke-width="3"/>
+<path d="M610 518H1119V538H610Z" fill="#af8667"/><path d="M617 539H1112V548H617Z" fill="#4b3b35"/>
+<path d="M591 98H1136" stroke="#6a5449" stroke-width="8" stroke-linecap="round"/>
+<circle cx="582" cy="98" r="10" fill="#b98e66"/><circle cx="1145" cy="98" r="10" fill="#b98e66"/>
+<path d="M610 108C595 231 606 394 575 553L651 543C627 388 650 222 641 108Z" fill="#9c8c85"/><path d="M622 113C608 290 629 402 605 546M638 111C630 280 645 401 632 543" stroke="#594e52" stroke-width="7" stroke-opacity=".4"/>
+<path d="M1092 108C1095 254 1086 383 1125 551L1172 541C1135 381 1142 229 1134 108Z" fill="#9c8c85"/><path d="M1109 112C1110 296 1105 401 1143 546M1126 112C1134 293 1121 388 1159 542" stroke="#594e52" stroke-width="7" stroke-opacity=".4"/>
+<!-- Tiny objects on the sill -->
+<path d="M1002 510h47l-7 24h-33Z" fill="#c68462"/>
+<path d="M1025 510v-58m0 30c-26-2-37-16-34-30 27 0 36 12 34 30Zm1-10c21-2 32-18 25-30-23 5-28 16-25 30Z" fill="#6d8765" stroke="#566f5c" stroke-width="3"/>
+<path d="M700 505h29v28h-29Z" fill="#e1b58e"/><path d="M728 511c21-6 20 18 1 14" stroke="#e1b58e" stroke-width="5"/>
+<!-- Gallery on left wall -->
+<g transform="translate(214 123) rotate(-4 67 83)"><rect x="-7" y="-7" width="148" height="181" rx="2" fill="#152731"/><rect width="134" height="167" rx="2" fill="#b99470"/><rect x="9" y="9" width="116" height="149" fill="#e2c6a2"/><path d="M20 137 49 82 76 116 98 58 117 137Z" fill="#647a76"/><path d="M20 138 73 100 117 138Z" fill="#899183"/><circle cx="46" cy="44" r="15" fill="#bd858b"/></g>
+<g transform="translate(388 189) rotate(5 52 66)"><rect x="-6" y="-6" width="116" height="145" rx="2" fill="#152731"/><rect width="104" height="133" fill="#a67c5b"/><rect x="8" y="8" width="88" height="117" fill="#cfbba2"/><path d="M48 108V46m0 27c-27 3-28-21-14-28 15 1 19 13 14 28Zm0 15c33 0 40-29 18-36-20 5-22 19-18 36Z" fill="#64756b" stroke="#58645d" stroke-width="3"/></g>
+<!-- Built-in shelf -->
+<path d="M40 336H187V660H40Z" fill="#1e2e35"/><path d="M35 330H191V346H35Z" fill="#ad825d"/>
+<g stroke="#614b3d" stroke-width="10"><path d="M46 344V678M182 344V678M43 448H185M43 558H185M43 667H185"/></g>
+<path d="M63 370h20v73H63Z" fill="#ad7465"/><path d="M86 378h13v65H86Z" fill="#ceb28b"/><path d="M103 365h21v78h-21Z" fill="#768480"/><path d="m131 374 18-5 20 69-18 5Z" fill="#b69162"/>
+<path d="M63 413h20m3 10h13m4-39h21m14 5 18-5" stroke="#e3c7a3" stroke-opacity=".5" stroke-width="3"/>
+<path d="M71 523c-4-21-9-42 17-43s25 23 19 43l-9 25H80Z" fill="#bd8a71"/>
+<path d="M135 494h22v50h-22Z" fill="#ccb18e"/><path d="M131 491h30" stroke="#9a7558" stroke-width="5"/>
+<path d="M64 611h95v34H64Z" fill="#8f7662"/><path d="M73 619h76m-76 9h76m-76 9h76" stroke="#baa083" stroke-width="3"/>
+<path d="M111 332c-6-27 1-51 15-63m-15 40c-34 7-42-20-25-30 20 2 29 12 25 30Zm7-24c33 2 42-23 25-36-22 0-30 13-25 36Z" fill="#6e8363" stroke="#486352" stroke-width="3"/>
+<path d="M91 312h45l-7 23H98Z" fill="#ac755c"/>
+<!-- Lamp pool and floor lamp -->
+<ellipse cx="539" cy="418" rx="230" ry="240" fill="url(#lampglow)"/>
+<path d="M535 353v348" stroke="#54443b" stroke-width="9"/>
+<path d="M510 708c3-13 48-13 51 0v7h-51Z" fill="#443b36"/>
+<path d="m488 280-20 81h136l-22-81Z" fill="#dcc19c" stroke="#a28b70" stroke-width="3"/>
+<path d="m497 284-15 72m26-72-5 72m39-72 7 72m20-72 22 72" stroke="#a89176" stroke-opacity=".38" stroke-width="2"/>
+<path d="M470 357h133" stroke="#f6d79d" stroke-width="4"/>
+<!-- Sofa cast shadow -->
+<ellipse cx="352" cy="788" rx="303" ry="37" fill="#25232a" opacity=".35" filter="url(#shadow)"/>
+<!-- Sofa -->
+<path d="M109 513c0-31 20-50 52-50h313c35 0 57 23 57 57v164H109Z" fill="url(#sofa)" stroke="#70464a" stroke-width="4"/>
+<path d="M129 505c2-15 16-24 36-24h303c24 0 43 13 44 36" stroke="#d39382" stroke-opacity=".45" stroke-width="3"/>
+<path d="M137 542c0-17 12-27 30-27h126c17 0 26 10 26 27v92H137Zm185 0c0-17 11-27 30-27h124c17 0 27 10 27 27v92H322Z" fill="#b57369" stroke="#855450" stroke-width="3"/>
+<path d="M105 630h418v93c0 22-15 40-39 40H142c-23 0-37-16-37-40Z" fill="#9e5e59" stroke="#78484a" stroke-width="4"/>
+<path d="M119 626c7-17 22-25 42-25h307c21 0 39 8 44 25l11 44H106Z" fill="#c58475" stroke="#875450" stroke-width="3"/>
+<path d="M316 606v63M113 672h403" stroke="#905951" stroke-width="3"/>
+<path d="M71 610c0-21 14-35 34-35s34 14 34 35v112c0 20-13 33-33 33s-35-13-35-33Z" fill="#b37267" stroke="#784c4b" stroke-width="4"/>
+<path d="M501 611c0-22 12-36 32-36s36 15 36 36v111c0 21-13 34-33 34s-35-13-35-34Z" fill="#b37267" stroke="#784c4b" stroke-width="4"/>
+<path d="M91 594c8-9 21-9 29-1m399 0c8-9 21-9 29 0" stroke="#d2937e" stroke-width="3"/>
+<path d="M115 759v26h24l5-25m346-1 4 26h24v-26" fill="#473b35"/>
+<!-- Pillows and draped blanket -->
+<path d="m159 544 63-17c13-3 19 3 22 14l17 64c3 13-3 19-15 22l-61 16c-13 3-21-2-24-14l-16-60c-4-13 2-22 14-25Z" fill="#c99a9a" stroke="#a17679" stroke-width="3"/>
+<path d="m164 554 61-15 22 75-66 18Z" stroke="#e4bfbb" stroke-opacity=".5" stroke-width="2"/>
+<path d="m419 548 52 16c11 3 15 11 12 22l-15 48c-3 12-11 16-22 12l-50-16c-12-4-17-11-13-22l15-47c4-12 11-16 21-13Z" fill="#747f75" stroke="#5b6661" stroke-width="3"/>
+<path d="M373 642c7 25-1 53-3 78l-4 56 87 3c-8-54-10-99 2-137Z" fill="#9f9c83"/><path d="m387 650-6 121m27-119-2 123m27-124 4 124" stroke="#d0bea0" stroke-opacity=".4" stroke-width="4"/>
+<path d="m366 779-2 10m15-9-1 11m15-11v11m14-11 1 12m14-11 1 11m14-11 2 10m12-10 2 10" stroke="#c8b69a" stroke-width="3"/>
+<!-- Projector side table, clear surface at 280,530 -->
+<path d="M205 549h150v17H205Z" fill="#b18b69" stroke="#6b5042" stroke-width="3"/>
+<path d="M218 564v88m124-88v88M217 632h126" stroke="#6e5344" stroke-width="8"/>
+<!-- Rug -->
+<ellipse cx="853" cy="830" rx="482" ry="128" fill="#272a30" opacity=".22" filter="url(#shadow)"/>
+<path d="M433 777c125-84 579-105 842 7 129 55 71 123-131 151-178 25-492 15-672-36-143-40-165-79-39-122Z" fill="#a17866" stroke="#70514b" stroke-width="4"/>
+<path d="M454 789c129-69 550-93 797 6 108 44 58 99-122 125-170 24-469 13-643-34-126-34-140-62-32-97Z" stroke="#c19a7c" stroke-width="4"/>
+<path d="M454 789c129-69 550-93 797 6 108 44 58 99-122 125-170 24-469 13-643-34-126-34-140-62-32-97Z" fill="url(#rugline)"/>
+<path d="m384 797-25 3m15 13-27 4m23 12-28 5m30 12-27 6m39 10-26 8m44 7-24 10m935-80 26 4m-18 10 29 6m-26 8 31 7m-31 9 30 8m-37 7 28 9" stroke="#c9a78a" stroke-width="3" stroke-linecap="round"/>
+<!-- Door -->
+<path d="M1366 190h174v523h-174Z" fill="#1d282e" stroke="#87725e" stroke-width="12"/>
+<path d="M1380 203h148v501h-148Z" fill="#454440"/>
+<path d="M1393 218h122v196h-122Zm0 218h122v249h-122Z" stroke="#696052" stroke-width="5"/>
+<circle cx="1497" cy="434" r="10" fill="#a18a63"/><path d="M1497 432h-24" stroke="#d3b47b" stroke-width="6" stroke-linecap="round"/>
+<path d="M1390 701h124" stroke="#ecc58b" stroke-opacity=".12" stroke-width="3"/>
+<!-- Right desk -->
+<ellipse cx="1242" cy="816" rx="174" ry="25" fill="#26262b" opacity=".3"/>
+<path d="m1088 648 334-2-11 25h-314Z" fill="#6c4c3f"/>
+<path d="M1098 659v167h19l9-167m246 0 11 167h19V659" fill="#805b45"/>
+<path d="M1106 690h285v87h-285Z" fill="url(#wood)" stroke="#684b3e" stroke-width="4"/>
+<path d="M1115 701h266v63h-266Z" stroke="#d09b70" stroke-opacity=".3" stroke-width="2"/>
+<path d="M1233 728h32" stroke="#d1ae7e" stroke-width="5" stroke-linecap="round"/>
+<path d="m1081 617 336-9 22 36-351 14Z" fill="#b48965" stroke="#6d5140" stroke-width="3"/>
+<path d="m1091 631 327-8" stroke="#d8b38b" stroke-opacity=".45" stroke-width="2"/>
+<!-- Desk lamp -->
+<ellipse cx="1334" cy="554" rx="152" ry="151" fill="url(#lampglow)"/>
+<path d="M1343 618v-79c0-44-39-69-65-70" stroke="#8d8168" stroke-width="7"/>
+<path d="M1318 619h51" stroke="#a39478" stroke-width="9" stroke-linecap="round"/>
+<path d="M1246 464c2-25 53-31 66-6l10 29-84 6Z" fill="#c28c69" stroke="#7e5c49" stroke-width="3"/>
+<path d="m1242 488 75-5" stroke="#f5cb8c" stroke-width="5"/>
+<!-- Books, cup and greenery beside letter area -->
+<path d="m1125 601 69-3 2 13-69 3Z" fill="#839086"/><path d="m1132 587 60 1v12l-60-1Z" fill="#c4a17c"/>
+<path d="M1349 588h29v28h-29Z" fill="#d1c1a6"/><path d="M1379 594c20-4 19 17 0 16" stroke="#d1c1a6" stroke-width="4"/>
+<path d="M1537 636h49l-8 67h-34Z" fill="#ad7559" stroke="#705443" stroke-width="3"/>
+<g fill="#6b8066" stroke="#486250" stroke-width="3"><path d="M1560 637v-96m0 61c-42 0-47-32-27-44 25 1 34 20 27 44Zm1-28c38 2 45-36 24-43-27 5-29 27-24 43Z"/><path d="M1559 623c28 0 38-20 26-31-21 0-29 11-26 31Z"/></g>
+<!-- A little warm ceiling light -->
+<path d="M1220 0v94" stroke="#837761" stroke-width="4"/><path d="M1188 123c0-42 64-42 64 0Z" fill="#c49f73"/><ellipse cx="1220" cy="124" rx="31" ry="8" fill="#f2cf98"/>
+<path d="M0 0H1600V1000H0Z" opacity=".55" filter="url(#grain)"/>
+</svg>

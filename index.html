@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#172b31">
+  <meta name="description" content="Маленькая тёплая комната для любимой. Здесь для тебя всегда горит свет.">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Для тебя, кот · Маленький мир</title>
+  <link rel="icon" href="assets/star.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="dreams.css">
+  <link rel="stylesheet" href="fireflies.css">
+  <link rel="stylesheet" href="polish.css">
+  <script src="dreams.js" defer></script>
+  <script src="fireflies.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <svg class="icon-library" aria-hidden="true"><defs>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2 2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5Z"/></symbol>
+    <symbol id="i-sound" viewBox="0 0 24 24"><path d="M11 5 6 9H3v6h3l5 4Z"/><path d="M15 8c3 2 3 6 0 8m3-11c5 4 5 10 0 14"/></symbol>
+    <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 0 1 5 0c0 2-2.5 2-2.5 4m0 3v.2"/></symbol>
+    <symbol id="i-letter" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 4 2 6 6 2-6 2-2 6-2-6-6-2 6-2Zm6-2v4m-2-2h4"/></symbol>
+    <symbol id="i-film" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 4v16M17 4v16M3 9h4m-4 6h4m10-6h4m-4 6h4"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20S2 14 2 7.8C2 2 9 1 12 6c3-5 10-4 10 1.8C22 14 12 20 12 20Z"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></symbol>
+  </defs></svg>
+
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Маленький мир, в начало"><svg><use href="#i-star"/></svg><span>маленький мир<span class="brand-note">сделан для тебя</span></span></a>
+    <div class="top-actions">
+      <button id="soundToggle" class="round-button sound-toggle" aria-label="Включить звук дождя" aria-pressed="false" title="Звук дождя"><svg><use href="#i-sound"/></svg><span class="sound-dot"></span></button>
+      <button id="helpOpen" class="round-button" aria-label="Как здесь играть" title="Как здесь играть"><svg><use href="#i-help"/></svg></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="opening" id="opening" aria-labelledby="openingTitle">
+      <div class="opening-dots" aria-hidden="true"></div>
+      <p class="eyebrow">ОДНА КОМНАТА. МНОГО НЕЖНОСТИ.</p>
+      <h1 id="openingTitle">Здесь для тебя<br>всегда горит <em>свет.</em></h1>
+      <p class="opening-copy">Кот, я собрал для тебя маленький мир.<br>Загляни. Я тут… с целой клумбой.</p>
+      <button class="button primary enter-button" id="enterRoom">Зайти в комнату <svg><use href="#i-arrow"/></svg></button>
+      <p class="opening-footnote">Трогай, двигай, находи маленькие секреты.</p>
+    </section>
+
+    <section class="room-section" aria-label="Интерактивная комната для любимой">
+      <div class="room-heading"><div><p class="eyebrow">ДЛЯ ТЕБЯ, КОТ</p><h2>Побудь здесь немного.</h2></div><p class="room-caption">За окном дождь.<br>А здесь — тепло и маленький я.</p></div>
+      <div class="room-frame" id="roomFrame">
+        <div class="room-stage" id="roomStage">
+          <picture class="room-art"><source media="(max-width: 620px)" srcset="assets/room-mobile.svg"><img src="assets/room-desktop.svg" alt="Уютная комната с диваном, арочным окном, письменным столом и мягким тёплым светом" draggable="false"></picture>
+          <div class="warmth" aria-hidden="true"></div>
+          <div class="window-weather" id="weatherWindow"><canvas id="rainCanvas" aria-hidden="true"></canvas><div class="sky-warmth"></div><button class="moon" id="moon" aria-label="Перетащить луну: менять вечер на закат" title="Подвигай луну"></button><canvas id="fogCanvas" aria-label="Нарисуй пальцем на запотевшем окне"></canvas><span class="window-hint">порисуй на стекле</span></div>
+          <button class="hotspot door-hotspot" id="doorOpen" aria-label="Открыть дверь в маленькую вселенную"><span class="hotspot-label">а что за дверью?</span><span class="door-handle-glow"></span></button>
+
+          <button id="character" class="character" aria-label="Мини-я с букетом. Нажми для фразы или перетащи на диван" title="Нажми или перетащи меня"><span class="character-bubble" id="characterBubble" aria-hidden="true"></span><img id="characterImage" src="assets/mini-you.webp" alt="Мультяшный парень с тёмными волнистыми волосами, зелёными глазами и огромным букетом" draggable="false"><span class="character-shadow" aria-hidden="true"></span><span class="hotspot-label char-label">это я. меня можно двигать</span></button>
+
+          <button class="gift hotspot" id="gift" aria-label="Развязать коробку и выпустить светлячков"><svg viewBox="0 0 210 190" aria-hidden="true"><defs><linearGradient id="giftSide" x2="1" y2="1"><stop stop-color="#c47e68"/><stop offset="1" stop-color="#915649"/></linearGradient></defs><ellipse cx="104" cy="172" rx="75" ry="12" fill="#172b31" opacity=".25"/><path d="m30 76 77 13 73-18-4 78-70 25-71-20Z" fill="url(#giftSide)" stroke="#6d493f" stroke-width="2"/><path d="m107 89-1 85m-44-92 1 81m77-81-2 79" stroke="#e9c9a6" stroke-width="17"/><g class="gift-lid"><path d="m23 62 80-24 85 21-80 27Z" fill="#f2bd9e" stroke="#754d41" stroke-width="2"/><path d="m23 62 2 20 83 20V86Zm83 24 82-27-1 20-81 23Z" fill="#c78c74" stroke="#754d41" stroke-width="2"/><path d="m64 50 79 25m-1-28L67 77" stroke="#f6d9b2" stroke-width="14"/><path d="M106 58C54 58 63 4 88 23c15 12 18 35 18 35Zm0 0c53-1 45-50 19-31-13 10-19 31-19 31Z" fill="none" stroke="#efd6ae" stroke-width="9" stroke-linecap="round"/><path d="m105 60-18 43m19-43 26 36" stroke="#efd6ae" stroke-width="9"/></g></svg><span class="hotspot-label">осторожно, внутри нежность</span></button>
+
+          <button class="letter hotspot" id="letterOpen" aria-label="Открыть письмо для любимой"><svg viewBox="0 0 180 135" aria-hidden="true"><path d="m14 39 138-19 17 86-139 20Z" fill="#3f2c23" opacity=".25"/><path d="M9 29 151 12l16 87-141 20Z" fill="#e8d9b8" stroke="#aa9273" stroke-width="2"/><path d="m11 31 79 38 62-55m-128 99 47-57m89 40-61-40" fill="none" stroke="#bca17f" stroke-width="2"/><circle cx="92" cy="64" r="17" fill="#b76960"/><path d="m83 60 5 3 6-9 4 10 6 3-11 9-10-7Z" fill="#f4cfb3" opacity=".7"/></svg><span class="hotspot-label">для тебя. самое важное</span></button>
+
+          <button class="projector hotspot" id="projectorOpen" aria-label="Включить проектор маленьких мечт"><svg viewBox="0 0 190 170" aria-hidden="true"><path d="m54 125-12 35m82-35 16 35" stroke="#55443e" stroke-width="9"/><path d="m131 81 45-16v39l-45-6Z" fill="#b5a184" stroke="#4b504a" stroke-width="3"/><rect x="25" y="62" width="111" height="70" rx="14" fill="#627771" stroke="#354942" stroke-width="3"/><circle cx="48" cy="44" r="29" fill="#afb4a0" stroke="#4a5b52" stroke-width="3"/><circle cx="111" cy="38" r="33" fill="#d0c5a8" stroke="#4a5b52" stroke-width="3"/><g fill="#62746a"><circle cx="48" cy="44" r="8"/><circle cx="33" cy="34" r="7"/><circle cx="59" cy="29" r="7"/><circle cx="49" cy="61" r="7"/><circle cx="111" cy="38" r="8"/><circle cx="95" cy="23" r="8"/><circle cx="129" cy="28" r="8"/><circle cx="114" cy="59" r="8"/></g><circle cx="58" cy="99" r="13" fill="#d8b38d"/><path d="M86 99h32m-32 9h24" stroke="#354942" stroke-width="4"/><circle cx="130" cy="78" r="5" fill="#f4dca1" class="projector-light"/></svg><span class="hotspot-label">три маленькие мечты</span></button>
+
+          <div class="fireflies" id="fireflies" aria-label="Светлячки с тёплыми словами"></div>
+          <div class="sofa-drop" id="sofaDrop" aria-hidden="true">Можно сюда</div>
+          <div class="room-vignette" aria-hidden="true"></div>
+          <div class="room-note"><span class="live-dot"></span><span id="roomNote">здесь всё можно потрогать</span></div>
+          <div class="discovery" id="discovery" aria-live="polite">0 / 6 огоньков</div>
+        </div>
+        <div class="firefly-controls" id="fireflyControls" hidden></div>
+        <div class="room-toolbar" aria-label="Предметы комнаты">
+          <button data-open="letter"><svg><use href="#i-letter"/></svg><span>Письмо</span></button>
+          <button data-open="gift"><svg><use href="#i-spark"/></svg><span>Огоньки</span></button>
+          <button data-open="dreams"><svg><use href="#i-film"/></svg><span>Мечты</span></button>
+          <button data-open="universe"><svg><use href="#i-heart"/></svg><span>Обнять</span></button>
+        </div>
+        <div class="character-controls" aria-label="Куда посадить маленького меня"><span>Маленького меня можно перетаскивать</span><div><button id="placeOnSofa" aria-pressed="false">На диван</button><button id="placeOnRug" aria-pressed="true">На ковёр</button></div></div>
+      </div>
+      <p class="below-room">Маленький мир. Большой букет. И кое-что, что я хочу тебе сказать.</p>
+    </section>
+    <footer>С нежностью, твой кот бибирмот.<svg aria-hidden="true"><use href="#i-star"/></svg></footer>
+  </main>
+
+  <dialog id="letterDialog" class="modal letter-modal" aria-labelledby="letterTitle"><button class="modal-close" data-close aria-label="Закрыть письмо"><svg><use href="#i-close"/></svg></button><article class="paper"><span class="paper-mark" aria-hidden="true">✧</span><p class="eyebrow">САМОЕ ВАЖНОЕ — ЗДЕСЬ</p><h2 id="letterTitle">Любимая,</h2><div class="letter-body"><p>Прости, что накричал на тебя. Мне жаль. Ты мне очень дорога, и я не хочу всё заканчивать, потому что я очень тебя люблю и представляю всю жизнь только с тобой.</p><p>Я собрал эту маленькую комнату, потому что мне хотелось сделать для тебя что-то тёплое. Я хочу, чтобы мы всё это пережили, чтобы это стало для нас опытом и мы стали ещё крепче, а не расставались каждый раз.</p><p>Можно просто погулять здесь, потыкать в смешного маленького меня и вернуться к письму позже. Оно подождёт.</p><p>Кот, я тебя люблю. Держи этот огромный виртуальный букет. Мне очень хочется быть к тебе бережнее.</p></div><p class="signature"><em>Твой кот бибирмот</em></p><button class="button paper-button" id="letterHug">Обнять на расстоянии <svg><use href="#i-heart"/></svg></button></article></dialog>
+  <dialog id="dreamsDialog" class="modal dreams-modal" aria-labelledby="dreamsTitle"><button class="modal-close" data-close aria-label="Закрыть проектор"><svg><use href="#i-close"/></svg></button><p class="eyebrow">ВКЛЮЧАЮ ПРОЕКТОР</p><h2 id="dreamsTitle">Маленькие мечты</h2><p class="modal-intro">Три тёплые сцены, которые хочется однажды прожить с тобой.</p><div id="dreamMount"></div></dialog>
+  <dialog id="helpDialog" class="modal help-modal" aria-labelledby="helpTitle"><button class="modal-close" data-close aria-label="Закрыть подсказки"><svg><use href="#i-close"/></svg></button><p class="eyebrow">ЗДЕСЬ МОЖНО НЕ СПЕШИТЬ</p><h2 id="helpTitle">Потрогай этот мир.</h2><ul class="help-list"><li><b>Маленький я</b><span>Нажми — покажу табличку. Перетащи на диван — присяду с цветами. Можно и кнопками под комнатой, а с клавиатуры — стрелками влево и вправо.</span></li><li><b>Коробка с бантом</b><span>Открой коробку и погладь огоньки. Позови их в хоровод или нажми «Подарить свет» — они соберут сердце у моего букета.</span></li><li><b>Окно и луна</b><span>Рисуй пальцем на стекле. Подвигай луну или нажми на неё — вечер станет закатом.</span></li><li><b>Проектор и дверь</b><span>В проекторе живут маленькие мечты. За дверью — наша крошечная вселенная.</span></li><li><b>Письмо</b><span>Можно открыть в любой момент. Всё самое важное — в нём.</span></li></ul><p class="help-end">Звук включается кнопкой сверху. Всё работает и в тишине.</p></dialog>
+  <dialog id="universeDialog" class="modal universe-modal" aria-labelledby="universeTitle"><button class="modal-close" data-close aria-label="Вернуться в комнату"><svg><use href="#i-close"/></svg></button><div class="universe-stars" aria-hidden="true"></div><div class="planet-scene" aria-hidden="true"><div class="planet-ring"></div><div class="planet"><div class="planet-path"></div></div><div class="little-house"><div class="house-roof"></div><div class="house-window"><i></i><i></i></div><div class="house-door"></div><div class="chimney"></div></div><div class="planet-spark p1"></div><div class="planet-spark p2"></div><div class="planet-spark p3"></div></div><p class="eyebrow">А ВЕСЬ ЭТОТ МИР — ВОТ ТАКОЙ МАЛЕНЬКИЙ</p><h2 id="universeTitle">И весь — для тебя.</h2><p id="hugMessage" aria-live="polite">Кот, держи одно очень бережное объятие.<br>Если тебе сейчас его хочется.</p><button class="button primary hug-button" id="hugButton"><svg><use href="#i-heart"/></svg><span>Обнять на расстоянии</span></button><button class="text-button" id="needTime">Мне нужно немного времени</button><div class="heart-particles" id="heartParticles" aria-hidden="true"></div></dialog>
+  <span class="sr-only" id="characterAnnouncement" role="status" aria-live="polite"></span>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <noscript><div class="no-js">Кот, для игры нужно включить JavaScript. А главное я всё равно скажу: прости. Ты мне очень дорога.</div></noscript>
+</body></html>
